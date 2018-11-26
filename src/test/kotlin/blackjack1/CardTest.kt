@@ -3,17 +3,19 @@ package blackjack1
 import org.junit.Test
 import kotlin.test.assertEquals
 
-class CardTest{
+class CardTest {
     @Test
-    fun test1(){
+    fun test1() {
 
-        val c1 = Card(1,1)
-        val c2 = Card(13,4)
+        val c1 = Card(value = 1, suit = 1)
+        val c2 = Card(value = 13, suit = 4)
 
-        assertEquals(1,c1.value)
-        assertEquals(1,c1.suit)
+        assertEquals(1, c1.value)
+        assertEquals(1, c1.suit)
+        assertEquals("Spades", c1.suitName)
 
-        assertEquals(13,c2.value)
-        assertEquals(4,c2.suit)
+        assertEquals(13, c2.value)
+        assertEquals(4, c2.suit)
+        assertEquals("Diamonds", c2.suitName)
     }
 }
